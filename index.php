@@ -4,13 +4,10 @@
     </head>
     <body>
         <img src="images/logo.png" length='200px' widht='150px'>
-        <h1> Simple Gallery E-commerce</h1><br>
-            
-                <a href=index.php>home</a>
-                <a href=index.php>about</a>
-                <a href=index.php>contacts</a>
-               
-            
+        <h1> Simple Gallery E-commerce</h1><br>            
+            <a href=index.php>home</a>
+            <a href=index.php>about</a>
+            <a href=index.php>contacts</a>    
         <hr>
         <?php
             $products = array(

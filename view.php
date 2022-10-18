@@ -3,6 +3,7 @@
         <link href='css/style.css' type='text/css' rel='stylesheet'>
     </head>
     <body>
+        
         <img src="images/logo.png">
         <h1> Simple Gallery E-commerce</h1><br>
             <a href=index.php>home</a>
@@ -10,6 +11,9 @@
             <a href=index.php>contact</a>               
             <hr>
         <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
             error_reporting(E_WARNING);
             $products = array(
                 [
@@ -52,17 +56,17 @@
             <?php }     
         ?>
         
-        <form action='preview.php' method='$_GET'>
+        <form action='preview.php' method='post'>
             <div >
                 <img src='<?=$products[$id]['image']; ?>' length='400' width='300'><br>
                 <?= $products[$id]['name']; ?> : get by <?= $products[$id]['price']; ?><br>
-                <input type='text' name='fname' placeholder='first name' required='required'></input><br>
-                <input type='text' name='lname' placeholder='last name' required='required'></input><br>
+                <input type='text' name='fname' placeholder='first name' required='required'>first name</input><br>
+                <input type='text' name='lname' placeholder='last name' required='required'></input>last name<br>
                 <input type='email' name='email' placeholder='your email' required='required'></input><br>                          
                 <input type='text' name='card' placeholder='card number' required='required'></input><br>
-                <button>submit</button>
-            </div>
-            
+                <button name='submit' type='submit'>submit</button>
+            </div>     
         </form>
+    
     </body>
 </html>
